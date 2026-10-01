@@ -45,7 +45,8 @@ they're better served by the full GoXLR app for now.
 | volumeDisplay    | choice | `percent`      | Show volumes as percent or raw (0-255)                        |
 | channel          | choice | `Mic`          | Channel shown on the bar                                      |
 | display          | choice | `glyph_value`  | Bar display: icon only, icon + value, or value only           |
-| glyph            | text   | `◆`            | Bar icon (any character/emoji); the mute icon stays `✖`         |
+| glyph            | text   | `◆`            | Bar icon: a literal character/emoji, or (with `glyphStyle: icon`) a [Material Symbols](https://fonts.google.com/icons) ligature name like `mic`; the mute icon stays `✖` |
+| glyphStyle       | choice | `text`         | Interpret `glyph` as literal text/emoji, or as a Material Symbols icon name |
 | showChannelName  | toggle | `false`        | Prefix the bar value with the channel name                    |
 | scrollStep       | int    | `2`            | Volume change per scroll notch on the capsule (%)              |
 | muteIndicator    | toggle | `true`         | Change colour while the shown channel is muted                 |

@@ -22,6 +22,8 @@ Item {
     readonly property string channel: (settings && settings.channel) ? settings.channel : "Mic"
     readonly property string displayMode: (settings && settings.display) ? settings.display : "glyph_value"
     readonly property string glyph: (settings && settings.glyph) ? settings.glyph : "\u25C6"
+    readonly property string glyphStyle: (settings && settings.glyphStyle) ? settings.glyphStyle : "text"
+    readonly property string glyphFont: root.glyphStyle === "icon" ? "Material Symbols Rounded" : Theme.mono
     readonly property bool showChannelName: settings ? settings.showChannelName === true : false
     readonly property bool muteIndicatorOn: settings ? settings.muteIndicator !== false : true
     readonly property bool hideWhenAbsent: settings ? settings.hideWhenAbsent === true : false
@@ -81,7 +83,7 @@ Item {
                     return Theme.vermDeep;
                 return root.active ? Theme.accent : Theme.dim;
             }
-            font.family: Theme.mono
+            font.family: root.glyphFont
             font.pixelSize: 13 * root.s
         }
 

@@ -114,12 +114,23 @@
         ]
       },
       {
+        "key": "glyphStyle",
+        "type": "choice",
+        "label": "Bar icon style",
+        "group": "Widget",
+        "default": "text",
+        "options": [
+          { "value": "text", "label": "Text / emoji character" },
+          { "value": "icon", "label": "Material Symbols icon name" }
+        ]
+      },
+      {
         "key": "glyph",
         "type": "text",
         "label": "Bar icon",
         "group": "Widget",
         "default": "\u25C6",
-        "placeholder": "\u25C6"
+        "placeholder": "\u25C6 or, in icon style, a Material Symbols name like mic"
       },
       {
         "key": "showChannelName",
