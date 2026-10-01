@@ -114,6 +114,14 @@
         ]
       },
       {
+        "key": "glyph",
+        "type": "text",
+        "label": "Bar icon",
+        "group": "Widget",
+        "default": "\u25C6",
+        "placeholder": "\u25C6"
+      },
+      {
         "key": "showChannelName",
         "type": "toggle",
         "label": "Prefix the volume with the channel name",

@@ -21,6 +21,7 @@ Item {
 
     readonly property string channel: (settings && settings.channel) ? settings.channel : "Mic"
     readonly property string displayMode: (settings && settings.display) ? settings.display : "glyph_value"
+    readonly property string glyph: (settings && settings.glyph) ? settings.glyph : "\u25C6"
     readonly property bool showChannelName: settings ? settings.showChannelName === true : false
     readonly property bool muteIndicatorOn: settings ? settings.muteIndicator !== false : true
     readonly property bool hideWhenAbsent: settings ? settings.hideWhenAbsent === true : false
@@ -70,7 +71,7 @@ Item {
         Text {
             anchors.verticalCenter: parent.verticalCenter
             visible: root.displayMode !== "value"
-            text: root.muted && root.muteIndicatorOn ? "\u2716" : "\u25C6"
+            text: root.muted && root.muteIndicatorOn ? "\u2716" : root.glyph
             color: {
                 if (!root.connected)
                     return Theme.dim;
