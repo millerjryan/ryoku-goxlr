@@ -2,7 +2,7 @@
   "id": "goxlr",
   "name": "GoXLR",
   "version": "1.0.0",
-  "author": "josh <josh@example.com>",
+  "author": "dajax",
   "description": "Core GoXLR / GoXLR Mini control from the bar: a volume capsule with a quick flash on change, mic mute, and per-channel volumes in the panel. Backed by the goxlr-utility daemon.",
   "license": "MIT",
   "official": false,
